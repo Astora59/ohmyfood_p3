@@ -84,6 +84,7 @@ header {
 .explore {
 	display: flex;
 	flex-direction: column;
+	align-items: center;
 	gap: 20px;
 	h1 {
 		display: flex;
@@ -113,11 +114,12 @@ header {
 .fonctionnement {
 	display: flex;
 	flex-direction: column;
+	
 		.slide {
 			display: flex;
 			flex-direction: column;
 			gap: 10px;
-			width: 90%;
+			align-items: center;
 			button {
 				background: #fff;
 				box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
