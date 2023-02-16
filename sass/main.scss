@@ -114,6 +114,7 @@ header {
 		color: #fff;
 		padding: 15px;
 		border: none;
+		box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 	}
 }
 
@@ -128,7 +129,7 @@ header {
 		.slide {
 			display: flex;
 			flex-direction: column;
-			gap: 10px;
+			gap: 25px;
 			align-items: center;
 			button {
 				background: #fff;
@@ -137,6 +138,14 @@ header {
 				border-radius: $border-radius;
 				padding: 20px;
 				width: 80%;
+				justify-content: flex-start;
+				font-size: 15px;
+				i {
+					color: grey;
+					padding-right: 20px;
+				}
+					
+				
 			}
 			
 		}
