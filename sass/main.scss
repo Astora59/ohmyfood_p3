@@ -48,22 +48,27 @@ table {
 $colour-primary: #9356DC;
 $colour-secondary: #FF79DA;
 $colour-tertiary: #99E2D0;
+$colour-grey: rgb(107, 105, 105);
 $border-radius: 20px 20px 20px 20px;
 
 
 
 
 body {
-    max-width: 768px;
+    width: 768px;
     font-family: 'roboto';
     box-sizing: border-box;
+	@media screen and (min-width:992px) {
+		width: auto;	
+	}
 }
 
 /****************HEADER*****************/
 header {
     display: flex;
     justify-content: center;
-    img {
+	
+	    img {
         display: flex;
         justify-content: center;
 		padding: 20px;
@@ -100,6 +105,7 @@ header {
 	p {
 		display: flex;
 		justify-content: center;
+		color: #535151;
 
 	}
 	&__button {
@@ -176,6 +182,13 @@ header {
 	margin-bottom: 33px;
 	background-color: #ffffff;
 	height: 300px;
+	.new {
+		color: #218f73;
+		background-color: $colour-tertiary;
+		padding: 10px;
+		position: absolute;
+		 
+	}
 	img {
 		width: 100%;
 		height: 70%;
@@ -186,20 +199,37 @@ header {
 	.container {
 		display: flex;
 		justify-content: space-between;
-		padding-top: 20px;
+		padding: 20px;
 		.card-description {
 			flex-direction: column;
+			font-size: 20px;
 			
+		}
+		.like {
+			font-size: 30px;
 		}
 	}
 	}
 
+.grey {
+	color: $colour-grey;
+}
 
-
-
+@mixin logo_color {
+	@if (background-color: #fff) {
+		color: #000;
+	}@else {
+		color: #fff;
+	}
+}
+@mixin new_color {
+	@if (background-color: $colour-tertiary) {
+		$colour:darken ($colour, 10%)
+	}
+}
 
 footer {
-	background-color: #242424;
+	background-color: #353535;
 	.footer__display
 	{
 		padding: 20px;
@@ -208,17 +238,41 @@ footer {
 		display: flex;
 		gap: 10px;
 	}
+
+	.resto_proposition {
+		gap: 30px;
+		
+	}
+	.about {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+	}
+
+	a {
+		text-decoration: none;
+	}
 		h3 {
 			font-family: 'shrikhand';
-			color: #ffffff;
+			@include logo_color();
+			color: #fff;
 			font-size: 20px;
+			font-weight: 300;
+			padding-bottom: 20px;
 		}
 		p {
 			color: #ffffff;
-			
+			font-weight: 300;
 		}
 
 		.white {
 			color: #ffffff;
+			
+			
 		}
+		
 }
+
+
+
+/*media min-width 992*/
