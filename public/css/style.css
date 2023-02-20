@@ -71,6 +71,7 @@ header img {
   padding: 20px;
 }
 
+/********** Localisation ********/
 .location {
   display: flex;
   flex-direction: row;
@@ -82,6 +83,7 @@ header img {
   box-shadow: rgba(137, 137, 138, 0.25) 0px 30px 60px -12px inset;
 }
 
+/********* partie explorer nos restaurants********/
 .explore {
   display: flex;
   flex-direction: column;
@@ -118,6 +120,7 @@ header img {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
+/*********** DESCRIPTION DES ETAPES***************/
 .fonctionnement {
   display: flex;
   flex-direction: column;
@@ -133,6 +136,13 @@ header img {
   gap: 25px;
   align-items: center;
 }
+@media screen and (min-width: 992px) {
+  .fonctionnement .slide {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
 .fonctionnement .slide button {
   background: #fff;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -143,6 +153,11 @@ header img {
   justify-content: flex-start;
   font-size: 15px;
 }
+@media screen and (min-width: 992px) {
+  .fonctionnement .slide button {
+    width: 30%;
+  }
+}
 .fonctionnement .slide button i {
   color: grey;
   padding-right: 20px;
@@ -152,6 +167,13 @@ header img {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+@media screen and (min-width: 992px) {
+  .card_disposition {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 
 .restaurants h2 {
@@ -168,6 +190,12 @@ header img {
   margin-bottom: 33px;
   background-color: #ffffff;
   height: 300px;
+}
+@media screen and (min-width: 992px) {
+  .card {
+    width: 40%;
+    margin-left: 20px;
+  }
 }
 .card .new {
   color: #218f73;
