@@ -60,10 +60,16 @@ body {
   }
 }
 
+a {
+  text-decoration: none;
+  color: #000;
+}
+
 /****************HEADER*****************/
 header {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 header img {
   display: flex;
@@ -152,6 +158,16 @@ header img {
   width: 70%;
   justify-content: flex-start;
   font-size: 15px;
+  align-items: center;
+}
+.fonctionnement .slide button i {
+  font-size: 20px;
+}
+.fonctionnement .slide button i:hover {
+  color: #9356DC;
+}
+.fonctionnement .slide button .step:hover {
+  background-color: #c9acec;
 }
 @media screen and (min-width: 992px) {
   .fonctionnement .slide button {
@@ -202,6 +218,7 @@ header img {
   background-color: #99E2D0;
   padding: 10px;
   position: absolute;
+  z-index: 1000;
 }
 .card img {
   width: 100%;
@@ -263,6 +280,6 @@ footer .white {
   color: #ffffff;
 }
 
-/*media min-width 992*/
+/************************************* menu page ***************************************/
 
 /*# sourceMappingURL=style.css.map */

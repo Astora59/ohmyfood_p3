@@ -63,10 +63,16 @@ body {
 	}
 }
 
+a {
+	text-decoration: none;
+	color: #000;
+}
+
 /****************HEADER*****************/
 header {
     display: flex;
     justify-content: center;
+	align-items: center;
 	
 	    img {
         display: flex;
@@ -163,7 +169,18 @@ header {
 				width: 70%;
 				justify-content: flex-start;
 				font-size: 15px;
+				align-items: center;
+				i {
+					font-size: 20px;
+				}
 
+				i:hover {
+					color: #9356DC;
+				}
+
+				.step:hover {
+					background-color: #c9acec;
+				}
 				@media screen and (min-width:992px) {
 					width: 30%;
 				}
@@ -217,6 +234,7 @@ header {
 		background-color: $colour-tertiary;
 		padding: 10px;
 		position: absolute;
+		z-index: 1000;
 		 
 	}
 	img {
@@ -305,4 +323,5 @@ footer {
 
 
 
-/*media min-width 992*/
+/************************************* menu page ***************************************/
+
