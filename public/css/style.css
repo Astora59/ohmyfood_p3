@@ -281,5 +281,72 @@ footer .white {
 }
 
 /************************************* menu page ***************************************/
+.img__menu img {
+  object-fit: cover;
+  width: 100%;
+}
+
+.menu {
+  border-radius: 20px 20px 0 0;
+}
+.menu .menu__title {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+}
+.menu .menu__title i {
+  font-size: 40px;
+}
+.menu h1 {
+  font-family: "shrikhand";
+  font-size: 40px;
+}
+
+.card__placement {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.menu__card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border-radius: 20px 20px 20px 20px;
+  width: 80%;
+  margin-bottom: 33px;
+  background-color: #ffffff;
+  padding: 15px;
+  height: 50px;
+}
+.menu__card .menu__details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 20px;
+}
+
+.menu__category {
+  border-bottom: #99E2D0;
+  border-width: 1em;
+  margin-bottom: 20px;
+  font-size: 20px;
+  text-transform: uppercase;
+  padding-left: 60px;
+}
+
+.commander__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  border-radius: 20px 20px 20px 20px;
+  background: linear-gradient(#FF79DA, #9356DC);
+  font-weight: 500;
+  font-size: 15px;
+  color: #fff;
+  padding: 15px;
+  border: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
 
 /*# sourceMappingURL=style.css.map */
