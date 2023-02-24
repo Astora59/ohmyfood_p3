@@ -195,6 +195,21 @@ header {
 		}
 }
 
+.step_order {
+	background-color: $colour-primary;
+	border-radius: 50%;
+	padding: 10px;
+	padding-left: 15px;
+	padding-right: 15px;
+	color: #fff;
+	position: absolute;
+	left: 110px;
+	
+
+}
+
+
+
 .card_disposition {
 	display: flex;
 	flex-direction: column;
@@ -397,4 +412,8 @@ footer {
 		padding: 15px;
 		border: none;
 		box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.button__position {
+
 }

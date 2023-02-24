@@ -179,6 +179,17 @@ header img {
   padding-right: 20px;
 }
 
+.step_order {
+  background-color: #9356DC;
+  border-radius: 50%;
+  padding: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  color: #fff;
+  position: absolute;
+  left: 110px;
+}
+
 .card_disposition {
   display: flex;
   flex-direction: column;
