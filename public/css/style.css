@@ -360,4 +360,10 @@ footer .white {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
+.button__position {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}
+
 /*# sourceMappingURL=style.css.map */
