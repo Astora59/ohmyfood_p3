@@ -250,6 +250,10 @@ header img {
   font-size: 30px;
 }
 
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
 .grey {
   color: rgb(107, 105, 105);
 }
@@ -328,6 +332,9 @@ footer .white {
   background-color: #ffffff;
   padding: 15px;
   height: 50px;
+}
+.menu__card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 .menu__card .menu__details {
   display: flex;
