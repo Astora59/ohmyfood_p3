@@ -178,8 +178,9 @@ header {
 					color: #9356DC;
 				}
 
-				.step:hover {
-					background-color: #c9acec;
+				&:hover {
+					background-color: #f5effc;
+					box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 				}
 				@media screen and (min-width:992px) {
 					width: 30%;

@@ -166,8 +166,9 @@ header img {
 .fonctionnement .slide button i:hover {
   color: #9356DC;
 }
-.fonctionnement .slide button .step:hover {
-  background-color: #c9acec;
+.fonctionnement .slide button:hover {
+  background-color: #f5effc;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 @media screen and (min-width: 992px) {
   .fonctionnement .slide button {
