@@ -125,6 +125,10 @@ header img {
   border: none;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
+.explore__button:hover {
+  box-shadow: 0 16px 16px 0 rgba(0, 0, 0, 0.2);
+  background: linear-gradient(#ae80e5 #fface8);
+}
 
 /*********** DESCRIPTION DES ETAPES***************/
 .fonctionnement {
@@ -372,6 +376,30 @@ footer .white {
   display: flex;
   justify-content: center;
   padding: 30px;
+}
+
+.spinner_placement {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinner {
+  display: flex;
+  height: 200px;
+  width: 200px;
+  border: 6px solid;
+  align-items: center;
+  justify-content: center;
+  border-color: #9356DC transparent #FF79DA transparent;
+  border-radius: 50%;
+  animation: spin 1s ease infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

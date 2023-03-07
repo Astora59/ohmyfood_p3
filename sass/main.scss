@@ -51,7 +51,11 @@ $colour-tertiary: #99E2D0;
 $colour-grey: rgb(107, 105, 105);
 $border-radius: 20px 20px 20px 20px;
 
-
+@mixin button__hover {
+	box-shadow: 0 16px 16px 0 rgba(0,0,0,0.2);
+	background: linear-gradient(lighten($colour-primary, 10%) lighten($colour-secondary, 10%))
+	
+}
 
 
 body {
@@ -132,6 +136,9 @@ header {
 		padding: 15px;
 		border: none;
 		box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+		&:hover {
+			@include button__hover()
+		}
 	}
 }
 
@@ -271,6 +278,8 @@ header {
 		}
 		.like {
 			font-size: 30px;
+			
+			
 		}
 	}
 	}
@@ -428,4 +437,33 @@ footer {
 		display: flex;
 		justify-content: center;
 		padding: 30px;
+}
+
+
+
+
+//////////////// loading spinner 
+.spinner_placement {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+.spinner {
+	display: flex;
+	height: 200px;
+	width: 200px;
+	border: 6px solid;
+	align-items: center;
+	justify-content: center;
+	border-color: $colour-primary transparent $colour-secondary transparent;
+	border-radius: 50%;
+	animation: spin 1s ease infinite
+}
+
+@keyframes spin {
+	to {
+		transform: rotate(360deg)
+	}
 }
