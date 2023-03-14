@@ -127,7 +127,7 @@ header img {
 }
 .explore__button:hover {
   box-shadow: 0 16px 16px 0 rgba(0, 0, 0, 0.2);
-  background: linear-gradient(#ae80e5 #fface8);
+  background: #ae80e5;
 }
 
 /*********** DESCRIPTION DES ETAPES***************/
@@ -167,12 +167,12 @@ header img {
 .fonctionnement .slide button i {
   font-size: 20px;
 }
-.fonctionnement .slide button i:hover {
-  color: #9356DC;
-}
 .fonctionnement .slide button:hover {
   background-color: #f5effc;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.fonctionnement .slide button:hover i {
+  color: #9356DC;
 }
 @media screen and (min-width: 992px) {
   .fonctionnement .slide button {
@@ -184,6 +184,10 @@ header img {
   padding-right: 20px;
 }
 
+.step {
+  position: relative;
+}
+
 .step_order {
   background-color: #9356DC;
   border-radius: 50%;
@@ -192,7 +196,7 @@ header img {
   padding-right: 15px;
   color: #fff;
   position: absolute;
-  left: 110px;
+  left: 0;
 }
 
 .card_disposition {
@@ -222,6 +226,7 @@ header img {
   margin-bottom: 33px;
   background-color: #ffffff;
   height: 300px;
+  position: relative;
 }
 @media screen and (min-width: 992px) {
   .card {
@@ -235,6 +240,8 @@ header img {
   padding: 10px;
   position: absolute;
   z-index: 1000;
+  right: 20px;
+  top: 10px;
 }
 .card img {
   width: 100%;
@@ -253,14 +260,29 @@ header img {
 }
 .card .container .like {
   font-size: 30px;
+  object-fit: cover;
 }
 
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
+.heart__fill {
+  transform: scaleY(1);
+}
+.heart__fill:hover {
+  transform: scaleY(2);
+  background-color: #9356DC;
+  transition: transform 1000ms;
+}
+
 .grey {
   color: rgb(107, 105, 105);
+}
+
+.gradient-heart {
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  object-fit: cover;
 }
 
 footer {
@@ -308,6 +330,8 @@ footer .white {
 
 .menu {
   border-radius: 20px 20px 0 0;
+  background-color: #fff;
+  z-index: 1000;
 }
 .menu .menu__title {
   display: flex;
@@ -355,6 +379,7 @@ footer .white {
   font-size: 20px;
   text-transform: uppercase;
   padding-left: 60px;
+  border-bottom: 5px solid #99E2D0;
 }
 
 .commander__button {
@@ -382,6 +407,7 @@ footer .white {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: absolute;
 }
 
 .spinner {
@@ -394,6 +420,7 @@ footer .white {
   border-color: #9356DC transparent #FF79DA transparent;
   border-radius: 50%;
   animation: spin 1s ease infinite;
+  z-index: 1000;
 }
 
 @keyframes spin {
