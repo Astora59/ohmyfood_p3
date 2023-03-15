@@ -53,17 +53,19 @@ $border-radius: 20px 20px 20px 20px;
 $gradient: linear-gradient($colour-secondary, $colour-primary);
 
 
+
+
 /////////// lighten button mixin //////////////////////////////
 
 @mixin button__hover {
 	box-shadow: 0 16px 16px 0 rgba(0,0,0,0.2);
-	background: lighten($colour-primary,10%)
+	background: linear-gradient(lighten($colour-secondary,3%), lighten($colour-primary, 3%));
+	transition-duration: 0.5s;
 	
 }
 
 
 body {
-    width: 768px;
     font-family: 'roboto';
     box-sizing: border-box;
 	@media screen and (min-width:992px) {
@@ -221,7 +223,8 @@ header {
 	padding-right: 15px;
 	color: #fff;
 	position: absolute;
-	left: 0;
+	left: -20px;
+	top: 22px;
 	
 	
 
@@ -295,6 +298,7 @@ header {
 			object-fit: cover;
 			
 			
+			
 		}
 	}
 	}
@@ -304,13 +308,35 @@ header {
   }
 
 ///////////////////////////// HEART ANIMATION //////////////////////////////////////
-.heart__fill {
-	transform: scaleY(1);
+.heart__fill:hover {
+	color: $colour-secondary;
+	font-style: $colour-primary;
+	font-weight: 700;
+	animation: heart__transition both 1s;
+}
+
+@keyframes heart__transition {
+	0% {
+		opacity: 0;
+	}
 	
-	&:hover {
-		transform: scaleY(2);
-		background-color: #9356DC;
-		transition: transform 1000ms;
+	25% {
+		font-weight: 600;
+		opacity: 0.50	;
+	}
+
+	50% {
+		font-weight: 700;
+		opacity: 0.50;
+	}
+
+	75% {
+		opacity: 0.75;
+	}
+
+
+	100% {
+		opacity: 1;
 	}
 }
 
@@ -324,6 +350,12 @@ header {
 	background-image: linear-gradient($colour-secondary, $colour-primary);
 	object-fit: cover;
 }
+
+
+
+//////////////////// FOOTER //////////////////////////////////////////////
+
+
 
 @mixin logo_color {
 	@if (background-color: #fff) {
@@ -391,15 +423,17 @@ footer {
 	img {
 		object-fit: cover;
 	    width: 100%;
+		height: 32rem;
 	}
 	
 }
 
 .menu {
-	border-radius: 20px 20px 0 0 ;
-	background-color: #fff;
-	z-index: 1000;
-	
+	border-radius: 2rem 2rem 0 0 ;
+	background-color: #f6f6f6;
+	z-index: 1;
+	position: relative;
+	margin-top: -4rem;
 	.menu__title {
 		display: flex;
 		justify-content: space-between;
@@ -453,6 +487,7 @@ footer {
 		text-transform: uppercase;
 		padding-left: 60px;
 		border-bottom: 5px solid $colour-tertiary;
+		width: 3rem;
 	}
 
 .commander__button {
@@ -468,6 +503,9 @@ footer {
 		padding: 15px;
 		border: none;
 		box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+		&:hover {
+			@include button__hover()
+		}
 }
 
 .button__position {

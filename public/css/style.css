@@ -50,7 +50,6 @@ table {
 }
 
 body {
-  width: 768px;
   font-family: "roboto";
   box-sizing: border-box;
 }
@@ -127,7 +126,8 @@ header img {
 }
 .explore__button:hover {
   box-shadow: 0 16px 16px 0 rgba(0, 0, 0, 0.2);
-  background: #ae80e5;
+  background: linear-gradient(#ff88de, #9b63df);
+  transition-duration: 0.5s;
 }
 
 /*********** DESCRIPTION DES ETAPES***************/
@@ -196,7 +196,8 @@ header img {
   padding-right: 15px;
   color: #fff;
   position: absolute;
-  left: 0;
+  left: -20px;
+  top: 22px;
 }
 
 .card_disposition {
@@ -267,15 +268,32 @@ header img {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
-.heart__fill {
-  transform: scaleY(1);
-}
 .heart__fill:hover {
-  transform: scaleY(2);
-  background-color: #9356DC;
-  transition: transform 1000ms;
+  color: #FF79DA;
+  font-style: #9356DC;
+  font-weight: 700;
+  animation: heart__transition both 1s;
 }
 
+@keyframes heart__transition {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    font-weight: 600;
+    opacity: 0.5;
+  }
+  50% {
+    font-weight: 700;
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .grey {
   color: rgb(107, 105, 105);
 }
@@ -326,12 +344,15 @@ footer .white {
 .img__menu img {
   object-fit: cover;
   width: 100%;
+  height: 32rem;
 }
 
 .menu {
-  border-radius: 20px 20px 0 0;
-  background-color: #fff;
-  z-index: 1000;
+  border-radius: 2rem 2rem 0 0;
+  background-color: #f6f6f6;
+  z-index: 1;
+  position: relative;
+  margin-top: -4rem;
 }
 .menu .menu__title {
   display: flex;
@@ -380,6 +401,7 @@ footer .white {
   text-transform: uppercase;
   padding-left: 60px;
   border-bottom: 5px solid #99E2D0;
+  width: 3rem;
 }
 
 .commander__button {
@@ -395,6 +417,11 @@ footer .white {
   padding: 15px;
   border: none;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.commander__button:hover {
+  box-shadow: 0 16px 16px 0 rgba(0, 0, 0, 0.2);
+  background: linear-gradient(#ff88de, #9b63df);
+  transition-duration: 0.5s;
 }
 
 .button__position {
