@@ -512,10 +512,27 @@ footer {
 		display: flex;
 		justify-content: center;
 		padding: 30px;
+		background-color: #f6f6f6;
 }
 
+///// ANIMATION MENU PAGE /////////////////////////////////
+/// 
 
+.menu__card {
+	animation: fadeIn__card 1000ms 1s backwards;
+}
 
+@keyframes fadeIn__card {
+	from {
+		opacity: 0.1;
+		transform: translateY(100px)
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
 
 //////////////// loading spinner 
 .spinner_placement {
