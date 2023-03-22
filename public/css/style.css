@@ -297,11 +297,6 @@ header img {
   color: rgb(107, 105, 105);
 }
 
-.gradient-heart {
-  background-image: linear-gradient(#FF79DA, #9356DC);
-  object-fit: cover;
-}
-
 footer {
   background-color: #353535;
 }
