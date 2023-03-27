@@ -313,11 +313,13 @@ header {
 
 ///////////////////////////// HEART ANIMATION //////////////////////////////////////
 .heart__fill:hover {
-	color: $colour-secondary;
-	font-style: $colour-primary;
 	font-weight: 700;
 	animation: heart__transition both 0.5s;
 	cursor: pointer;
+	background: linear-gradient(#FF79DA, #E965DB, #CF69DC, #B65AE1, #9356DC);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 
 @keyframes heart__transition {
@@ -327,7 +329,7 @@ header {
 
 	to {
 		opacity: 1;
-		font-weight: 700;
+		
 	}
 }
 
@@ -451,8 +453,9 @@ footer {
 	width: 80%;
 	margin-bottom: 33px;
 	background-color: #ffffff;
-	padding: 15px;
-	height: 50px;
+	height: 80px;
+	display: flex;
+	
 
 
 	&:hover {
@@ -461,9 +464,12 @@ footer {
 
 	.menu__details {
 		display: flex;
-		flex-direction: row;
+		flex-direction: column;
 		justify-content: space-between;
 		padding-top: 20px;
+		padding-bottom: 10px;
+		padding-left: 20px;
+		width: 100%;
 	}
 }
 
@@ -476,8 +482,8 @@ footer {
 	width: 80%;
 	margin-bottom: 33px;
 	background-color: #ffffff;
-	padding: 15px;
-	height: 50px;
+	height: 80px;
+	display: flex;
 
 	
 	&:hover {
@@ -486,9 +492,12 @@ footer {
 
 	.menu__details {
 		display: flex;
-		flex-direction: row;
+		flex-direction: column;
 		justify-content: space-between;
 		padding-top: 20px;
+		padding-bottom: 10px;
+		padding-left: 20px;
+		width: 100%;
 	}
 }
 
@@ -502,9 +511,8 @@ footer {
 	width: 80%;
 	margin-bottom: 33px;
 	background-color: #ffffff;
-	padding: 15px;
-	height: 50px;
-
+	height: 80px;
+	display: flex;
 	
 	&:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
@@ -512,11 +520,27 @@ footer {
 
 	.menu__details {
 		display: flex;
-		flex-direction: row;
+		flex-direction: column;
 		justify-content: space-between;
 		padding-top: 20px;
+		padding-bottom: 10px;
+		padding-left: 20px;
+		width: 100%;
 	}
 }
+
+	
+	.text__alignementCard {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+
+		p {
+			padding-right: 20px;
+		}
+
+	}
+
 
 	.menu__category {
 		border-bottom: $colour-tertiary;
@@ -525,7 +549,8 @@ footer {
 		font-size: 20px;
 		text-transform: uppercase;
 		padding-left: 60px;
-		border-bottom: 5px solid $colour-tertiary;
+		text-decoration: underline solid $colour-tertiary 4px;
+		text-underline-offset: 10px;
 		width: 3rem;
 	}
 
@@ -631,5 +656,74 @@ footer {
 @keyframes spin {
 	to {
 		transform: rotate(360deg)
+	}
+}
+
+
+//////// CHECKBOX
+
+.checkbox {
+	width: 0;
+	opacity: 0;
+	background-color: $colour-tertiary;
+	border-radius: 0 20px 20px 0;
+	display: flex;
+	height: 80px;
+	transition: all 500ms ease-in-out;
+	justify-content: center;
+	align-content: center;
+	
+}
+
+
+
+.checkmark {
+	color: $colour-tertiary;
+	background-color: #fff;
+	padding: 10px;
+	font-size: 20px;
+	border-radius: 50%;
+	transition: transform 500ms ease-in-out;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 20px;
+	align-content: center;
+	margin-top: 20px;
+}
+
+
+/////////// CHECKMARK TRANSITION
+
+.menu__card:hover {
+	.checkbox {
+		width: 10%;
+		opacity: 1;
+	}
+
+	.checkmark {
+		transform: rotate(360deg);
+	}
+}
+
+.menu__card--2:hover {
+	.checkbox {
+		width: 10%;
+		opacity: 1;
+	}
+
+	.checkmark {
+		transform: rotate(360deg);
+	}
+}
+
+.menu__card--3:hover {
+	.checkbox {
+		width: 10%;
+		opacity: 1;
+	}
+
+	.checkmark {
+		transform: rotate(360deg);
 	}
 }
