@@ -532,6 +532,11 @@ footer .white {
   justify-content: center;
   align-items: center;
   position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background-color: #fff;
+  z-index: 2000;
+  animation: spinning__fade 2s ease 1s forwards;
 }
 
 .spinner {
@@ -543,13 +548,21 @@ footer .white {
   justify-content: center;
   border-color: #9356DC transparent #FF79DA transparent;
   border-radius: 50%;
-  animation: spin 1s ease infinite;
-  z-index: 1000;
+  animation: spin 3s ease;
 }
 
 @keyframes spin {
   to {
     transform: rotate(360deg);
+  }
+}
+@keyframes spinning__fade {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    z-index: 0;
   }
 }
 .checkbox {
