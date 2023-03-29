@@ -554,6 +554,7 @@ footer .white {
 @keyframes spin {
   to {
     transform: rotate(360deg);
+    z-index: 0;
   }
 }
 @keyframes spinning__fade {
